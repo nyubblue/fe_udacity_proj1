@@ -1,0 +1,52 @@
+body {
+    background: url("../../images/home/home.jpg") no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10vh auto 10vh;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+.container .header {
+    grid-area: header;
+    text-align: center;
+}
+
+.container .main {
+    grid-area: main;
+    min-height: 78vh;
+}
+
+.container .sidebar {
+    grid-area: side;
+    padding-top: 1rem;
+}
+
+.container .footer {
+    grid-area: footer;
+}
+
+.container .main div:not(.title) {
+    opacity: .5;
+}
+
+.container .main {
+    background-color: aliceblue;
+}
+
+.container .main .title {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.container .main .content {
+    padding: 1rem 50px 0px;
+    font-size: 1.3rem;
+}

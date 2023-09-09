@@ -26,16 +26,16 @@
     margin-top: .8em;
 }
 
-.container .menu {
+.container .header .menu {
     display: flex;
     flex-direction: row;
 }
 
-.container .menu li {
+.container .header .menu li {
     width: 150px;
 }
 
-.container .menu a {
+.container .header .menu a {
     text-decoration: none;
     color: rgb(228, 134, 10);
     font-size: 1.2em;

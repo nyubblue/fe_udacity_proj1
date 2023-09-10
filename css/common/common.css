@@ -1,12 +1,17 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: cursive;
 }
 
 .head-title {
     font-weight: bold;
     color: rgb(228, 134, 10);
+}
+
+.container {
+    height: 100%;
 }
 
 .container .footer {
@@ -44,4 +49,8 @@
 
 a {
     text-decoration: none;
+}
+
+.txt-center {
+    text-align: center;
 }

@@ -1,9 +1,7 @@
-body {
-    background: url("../../images/home/home.jpg") no-repeat;
-    background-size: cover;
-}
+@import '../common/common.css';
 
-@media (min-width: 1025px) {
+/* PC Device */
+@media (min-width: 1200px) and (max-device-width: 1600px) {
     .container {
         display: grid;
         grid-template-columns: repeat(2, 1fr) 180px;
@@ -33,9 +31,42 @@ body {
     .container .footer {
         grid-area: footer;
     }
+
+    .container .main .content {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .container .main .content .card .caption {
+        display: grid;
+        grid-template-columns: 1fr minmax(300px, 1fr) 1fr;
+    }
+
+    .container .main .content .card .caption .imgC {
+        grid-area: 1/2/1/3;
+    }
+
+    .container .main .content .card .caption img {
+        max-height: 300px;
+    }
+
+    .container .main .content .card {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        height: 500px;
+        border-radius: 10px 10px 10px 10px;
+        background-color: #85FFBD;
+        background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    
+    }
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+/* Tablet Device */
+@media (min-width: 768px) and (max-width: 1199px) {
+
     .container {
         display: grid;
         grid-template-columns: auto;
@@ -64,37 +95,113 @@ body {
     .container .footer {
         grid-area: footer;
     }
-}
 
-@media (min-width: 1025px) {
-    .main .content {
+    .container .main .content {
         margin: 10px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         box-sizing: border-box;
     }
+
+    .container .main .content {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .container .main .content .card .caption {
+        display: grid;
+        grid-template-columns: 1fr minmax(300px, 1fr) 1fr;
+    }
+
+    .container .main .content .card .caption .imgC {
+        grid-area: 1/2/1/3;
+    }
+
+    .container .main .content .card .caption img {
+        max-height: 300px;
+    }
+
+    .container .main .content .card {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        height: 500px;
+        border-radius: 10px 10px 10px 10px;
+        background-color: #85FFBD;
+        background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    
+    }
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
-    .main .content {
+/* mobile Device */
+@media (min-width: 320px) and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "side"
+            "footer";
+    }
+
+    .container .header {
+        grid-area: header;
+        text-align: center;
+    }
+
+    .container .main {
+        grid-area: main;
+        min-height: 78vh;
+    }
+
+    .container .sidebar {
+        grid-area: side;
+        padding-top: 1rem;
+    }
+
+    .container .footer {
+        grid-area: footer;
+    }
+
+    .container .main .content {
         margin: 10px;
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
         box-sizing: border-box;
     }
+
+    .container .main .content .card .caption {
+        display: grid;
+        grid-template-columns: 1fr minmax(300px, 1fr) 1fr;
+    }
+
+    .container .main .content .card .caption .imgC {
+        grid-area: 1/2/1/3;
+    }
+
+    .container .main .content .card .caption img {
+        max-height: 300px;
+    }
+
+    .container .main .content .card {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        height: 500px;
+        border-radius: 10px 10px 10px 10px;
+        background-color: #85FFBD;
+        background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    
+    }
 }
 
-.main .content .card {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    height: 30vh;
-    box-shadow: 0px 10px 45px rgba(100, 100, 100, 0.4);
-    border-radius: 10px 10px 10px 10px;
-    background-color: #85FFBD;
-    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-
+body {
+    background: url("../../images/home/home.jpg") no-repeat;
+    background-size: cover;
 }
 
 .main .content .card .cart-title {
@@ -109,6 +216,8 @@ body {
     text-align: center;
     font-size: 1.3rem;
     font-weight: bold;
+    color: #ACFDA8;
+    display: block;
 }
 
 .sidebar .side-content {
@@ -119,8 +228,40 @@ body {
 }
 
 .sidebar .side-content .refer {
-    color: white;
     text-align: center;
     font-size: 1.3rem;
     height: 3rem;
+    position: relative;
+}
+
+.sidebar .side-content .cap {
+    background-color: #222126;
+    color: white;
+}
+
+.sidebar .side-content .refer a {
+    color: yellow;
+    display: block;
+    height: inherit;
+}
+
+.sidebar .side-content .refer a:hover {
+    background-color: #538322;
+}
+
+.btn:hover {
+    box-shadow: 3px 3px 3px 3px rgba(200, 151, 15, 0.4);
+    background-color: #538322;
+}
+
+.btn {
+    background-color: #2bb73d;
+    border-radius: 0px 0px 10px 10px;
+    border: none;
+}
+
+.refer .vercical-center {
+    padding-top: 10px;
+    position:absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
 }

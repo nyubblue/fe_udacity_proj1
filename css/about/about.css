@@ -27,22 +27,6 @@
     .container .footer {
         grid-area: footer;
     }
-
-    .author {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        grid-template-areas: 
-        "info more";
-    }
-
-     .author .info {
-        grid-area: info;
-    }
-
-    .author .more {
-        grid-area: more;
-    }
 }
 
 /* Tablet Device */
@@ -74,22 +58,6 @@
     .container .footer {
         grid-area: footer;
     }
-
-    .author {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        grid-template-areas: 
-        "info more";
-    }
-
-     .author .info {
-        grid-area: info;
-    }
-
-    .author .more {
-        grid-area: more;
-    }
 }
 
 /* mobile Device */
@@ -118,22 +86,6 @@
     .container .footer {
         grid-area: footer;
     }
-
-    .author {
-        display: grid;
-        grid-template-columns: auto;
-        gap: 20px;
-        grid-template-areas: 
-        "info" "more";
-    }
-
-     .author .info {
-        grid-area: info;
-    }
-
-    .author .more {
-        grid-area: more;
-    }
 }
 
 body {
@@ -141,7 +93,6 @@ body {
     background-size: cover;
     height: 100vh;
 }
-
 
 .container .main {
     background-color: aliceblue;
@@ -156,42 +107,3 @@ body {
     padding: 1rem 50px 0px;
     font-size: 1.3rem;
 }
-
-.avatar {
-    vertical-align: middle;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-  }
-
-  .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-
-  .more .social {
-    padding: 20px 20px 20px 0px;
-  }

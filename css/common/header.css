@@ -1,0 +1,25 @@
+.container .header ul {
+    list-style: none;
+    margin-top: .8em;
+}
+
+.container .header .menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .header .menu li {
+    width: 150px;
+}
+
+.container .header .menu a {
+    text-decoration: none;
+    color: rgb(228, 134, 10);
+    font-size: 1.2em;
+    display: block;
+}
+
+.head-title {
+    font-weight: bold;
+    color: rgb(228, 134, 10);
+}
